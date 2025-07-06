@@ -1,3 +1,4 @@
+// Noakhali
 document.getElementById('btn-donate-money').addEventListener('click',function(event){
    event.preventDefault();
 
@@ -22,5 +23,34 @@ document.getElementById('btn-donate-money').addEventListener('click',function(ev
 
   document.getElementById('account-balance').innerText = newBalance;
    document.getElementById('n-tk').innerText = newDonation;
+
+});
+
+// Fani 
+
+document.getElementById('btn-feni-donate').addEventListener('click',function(event){
+   event.preventDefault();
+
+   const addMoney = getInputFieldValueById('input-Donation-money');
+   const mainBalance  = getTextFiedlValueById('account-balance');
+   const FaniTK   = getTextFiedlValueById('f-tk');
+
+      if (addMoney <= 0 || isNaN(addMoney)) {
+      alert('Please enter a valid donation amount.');
+      return;
+   }
+
+   if (addMoney > mainBalance) {
+      alert('Insufficient balance!');
+      return;
+   }
+
+
+   // sum we need to add 
+   const newBalance = mainBalance - addMoney;
+   const newDonation = FaniTK + addMoney;
+
+  document.getElementById('account-balance').innerText = newBalance;
+   document.getElementById('f-tk').innerText = newDonation;
 
 });
