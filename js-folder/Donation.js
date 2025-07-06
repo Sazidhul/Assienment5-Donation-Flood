@@ -54,3 +54,33 @@ document.getElementById('btn-feni-donate').addEventListener('click',function(eve
    document.getElementById('f-tk').innerText = newDonation;
 
 });
+
+
+//Quta 
+
+document.getElementById('btn-quota-donate').addEventListener('click',function(event){
+   event.preventDefault();
+
+   const addMoney = getInputFieldValueById('input-contribute-money');
+   const mainBalance  = getTextFiedlValueById('account-balance');
+   const QutaTK   = getTextFiedlValueById('q-tk');
+
+      if (addMoney <= 0 || isNaN(addMoney)) {
+      alert('Please enter a valid donation amount.');
+      return;
+   }
+
+   if (addMoney > mainBalance) {
+      alert('Insufficient balance!');
+      return;
+   }
+
+
+   // sum we need to add 
+   const newBalance = mainBalance - addMoney;
+   const newDonation = QutaTK + addMoney;
+
+  document.getElementById('account-balance').innerText = newBalance;
+   document.getElementById('q-tk').innerText = newDonation;
+
+});
