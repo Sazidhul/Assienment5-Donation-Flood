@@ -69,7 +69,7 @@
       <!-- Donation and History -->
       <div class=" my-9 flex justify-center space-x-4">
          <div>
-            <button class="btn bg-Donate-primary"> Donation </button>
+            <button id="show-donation-money" class="btn bg-Donate-primary"> Donation </button>
          </div>
          <div>
             <button id="show-transaction-history" class="btn">History</button>
@@ -78,12 +78,12 @@
 
    </header>
    <!-- main section  -->
-   <main class="m-52">
-      <div>
+   <main class="px-4 md:px-10 lg:px-20 py-10">
+      <div id="add-money-form">
          <!-- Noakhali -->
          <div class="hero  h-full bg-base-200 rounded-xl">
-            <div class="hero-content flex-col space-x-8 lg:flex-row">
-               <img class="w-[400px]" src="image/noakhali.png" class="w-auto h-96 rounded-lg shadow-2xl" />
+            <div class="hero-content flex-col lg:flex-row lg:space-x-8 space-y-4 lg:space-y-0">
+               <img class="w-full max-w-sm rounded-lg shadow-2xl" src="image/noakhali.png" class="w-auto h-96 rounded-lg shadow-2xl" />
                <div class="w-2/4  ">
                   <div class="flex bg-slate-200  px-2 py-2  w-1/5 h-1/5  rounded-lg">
                      <img class="" src="image/coin.png" alt="">
@@ -154,12 +154,24 @@
 
                </div>
             </div>
-         </div>
+          </div>
+      
+      </div>
+      <!-- transaction history  -->
+        <div id="transaction-section" class="hidden">
+               <h2 class="text-3xl text-center">Transaction History</h2>
+               <div id="transaction-container">
+                  
+               </div>
+             </div>
+
           
    </main>
    <!-- src links to connect he amount of the DOM -->
    <script src="js-folder/utilities.js"></script>
+   
    <script src="js-folder/Donation.js"></script>
+   <script src="js-folder/features.js"></script>
    <!-- footer section -->
    <footer>
 

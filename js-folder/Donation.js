@@ -24,6 +24,9 @@ document.getElementById('btn-donate-money').addEventListener('click',function(ev
   document.getElementById('account-balance').innerText = newBalance;
    document.getElementById('n-tk').innerText = newDonation;
 
+   // ✅ add to transaction history
+   addTransactionHistory(`Donated ${addMoney} BDT to Noakhali. New Balance: ${newBalance} BDT.`);
+
 });
 
 // Fani 
@@ -53,6 +56,8 @@ document.getElementById('btn-feni-donate').addEventListener('click',function(eve
   document.getElementById('account-balance').innerText = newBalance;
    document.getElementById('f-tk').innerText = newDonation;
 
+    // ✅ add to transaction history
+   addTransactionHistory(`Donated ${addMoney} BDT to Feni. New Balance: ${newBalance} BDT.`);
 });
 
 
@@ -83,4 +88,10 @@ document.getElementById('btn-quota-donate').addEventListener('click',function(ev
   document.getElementById('account-balance').innerText = newBalance;
    document.getElementById('q-tk').innerText = newDonation;
 
+    // ✅ add to transaction history
+   addTransactionHistory(`Donated ${addMoney} BDT to Quota Movement. New Balance: ${newBalance} BDT.`);
+
 });
+
+
+//  add to transaction history 
